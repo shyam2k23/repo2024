@@ -1,8 +1,10 @@
 # OS
-https://www.javatpoint.com/what-is-linux
+
 Operating systems, the software that powers your computer(Hardware), rely on crucial elements known as 
-	Kernal 
-	The file system.
+- Kernal 
+- The file system.
+
+https://www.javatpoint.com/what-is-linux
 	
 # File System
 ## Linux File System
