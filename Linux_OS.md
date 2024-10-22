@@ -5,6 +5,35 @@ Operating systems, the software that powers your computer(Hardware), rely on cru
 - The file system.
 
 https://www.javatpoint.com/what-is-linux
+
+# Functions of Kernel
+1. Process Management
+- Scheduling and execution of processes.
+- Context switching between processes.
+- Process creation and termination.
+2. Memory Management
+- Allocation and deallocation of memory space.
+- Managing virtual memory.
+- Handling memory protection and sharing.
+3. Device Management
+- Managing input/output devices.
+- Providing a unified interface for hardware devices.
+- Handling device driver communication.
+4. File System Management
+- Managing file operations and storage.
+- Handling file system mounting and unmounting.
+- Providing a file system interface to applications.
+5. Resource Management
+- Managing system resources (CPU time, disk space, network bandwidth)
+- Allocating and deallocating resources as needed
+- Monitoring resource usage and enforcing resource limits
+6. Security and Access Control
+- Enforcing access control policies.
+- Managing user permissions and authentication.
+- Ensuring system security and integrity.
+7. Inter-Process Communication
+- Facilitating communication between processes.
+- Providing mechanisms like message passing and shared memory.
 	
 # File System
 ## Linux File System
