@@ -53,4 +53,8 @@ https://www.geeksforgeeks.org/different-ways-to-connect-one-computer-to-another-
 
 ### What is router?
 A router is a device that connects multiple devices to the internet and directs data packets to the correct destinations
-https://rukminim2.flixcart.com/image/850/1000/khkvukw0-0/router/q/r/w/n301-wireless-n-tenda-original-imaf9d7sys4nzpke.jpeg
+![image](https://rukminim2.flixcart.com/image/850/1000/khkvukw0-0/router/q/r/w/n301-wireless-n-tenda-original-imaf9d7sys4nzpke.jpeg)
+
+TENDA N301 300 Mbps Wireless Router
+
+
