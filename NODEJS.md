@@ -31,3 +31,6 @@ https://learn.microsoft.com/en-us/training/modules/intro-to-nodejs/
 https://roadmap.sh/nodejs
 
 https://codewithmosh.com/p/the-complete-node-js-course
+
+# For Java developer
+https://dev.to/fultonbrowne/i-am-java-developer-trying-to-learn-node-js-where-should-i-start-4pli
