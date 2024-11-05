@@ -1,3 +1,19 @@
+Table of content:
+- Getting Started - What is Git?
+- Getting Started - Basics
+- 2.1 Getting a Git Repository
+- 2.2 Recording Changes to the Repository 
+- 2.3 Viewing the Commit History
+- 2.4 Undoing Things
+- 2.5 Working with Remotes
+- 2.6 Tagging
+- 2.7 Git Aliases
+- 2.8 Summary
+- Git Branch Vs Tag
+- Git Tag
+- Git Branch
+- Git Log
+  
 # Getting Started - What is Git?
 Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 
@@ -75,12 +91,13 @@ https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F#what_is_git_sectio
   -  $ git mv README.md README
   -  $ git status
     
-2.3 Viewing the Commit History  
-2.4 Undoing Things  
-2.5 Working with Remotes  
-2.6 Tagging  
-2.7 Git Aliases  
-2.8 Summary  
+### 2.3 Viewing the Commit History  
+### 2.4 Undoing Things  
+### 2.5 Working with Remotes  
+### 2.6 Tagging  
+### 2.7 Git Aliases  
+### 2.8 Summary  
+
 https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository
 
 # Git Branch Vs Tag
