@@ -1,4 +1,87 @@
+# Getting Started - What is Git?
+Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 
+Git is easy to learn and has a tiny footprint with lightning fast performance. It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with features like cheap local branching, convenient staging areas, and multiple workflows.  
+https://git-scm.com/  
+https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F#what_is_git_section
+
+# Getting Started - Basics
+2. Git Basics  
+2.1 Getting a Git Repository
+  
+a) Initializing a Repository in an Existing Directory
+   - $ cd C:/Users/user/my_project
+   - $ git init
+   - $ git add *.c
+   - $ git add LICENSE
+   - $ git commit -m 'Initial project version'  
+  
+b) Cloning an Existing Repository
+   - git clone https://github.com/libgit2/libgit2
+  
+2.2 Recording Changes to the Repository  
+  
+a) Checking the Status of Your Files
+  - $ git status
+  - $ echo 'My Project' > README
+  - $ git status
+
+b) Tracking New Files
+  - $ git add README
+  - $ git status
+  
+c) Staging Modified Files
+  - $ git status
+  - $ git add CONTRIBUTING.md
+  - $ git status
+  - $ vim CONTRIBUTING.md
+  - $ git status
+  - $ git add CONTRIBUTING.md
+  - $ git status
+  - $ git status -s
+  
+d) Ignoring Files
+  - $ cat .gitignore
+  - *.[oa]
+  - *~
+  
+e) Viewing Your Staged and Unstaged Changes
+  - $ git status
+  - $ git diff
+  - $ git diff --staged
+  - git diff --cached to see what you’ve staged so far (--staged and --cached are synonyms):
+  - $ git diff --cached
+  
+f) Committing Your Changes
+  - $ git commit
+  - enter message for commit
+  - $ git commit -m "Story 182: fix benchmarks for speed"
+  
+g) Skipping the Staging Area
+  - $ git commit -a -m 'Add new benchmarks'
+  -  Adding the -a option to the git commit command makes Git automatically stage every file that is already tracked before doing the commit, letting you skip the git add part
+  
+h) Removing Files
+  -  $ rm PROJECTS.md
+  -  $ git status
+  -  $ git rm PROJECTS.md
+  -  $ git status
+  -  Another useful thing you may want to do is to keep the file in your working tree but remove it from your staging area.
+  -  $ git rm --cached README
+  
+i) Moving Files
+  -  If you want to rename a file in Git, you can run something like
+  -  $ git mv file_from file_to
+  -  $ git mv README.md README
+  -  $ git status
+    
+2.3 Viewing the Commit History  
+2.4 Undoing Things  
+2.5 Working with Remotes  
+2.6 Tagging  
+2.7 Git Aliases  
+2.8 Summary  
+https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository
 
 # Git Branch Vs Tag
 
