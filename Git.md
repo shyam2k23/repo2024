@@ -122,6 +122,8 @@ https://git-scm.com/book/en/v2/Git-Basics-Tagging
 ## Git Branch
 Branching means you diverge from the main line of development and continue to do work without messing with that main line.
 
+https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell
+
 ![image](https://github.com/user-attachments/assets/01138945-9d6c-4007-b491-42ad6d954115)
 
 # Git Log
@@ -131,3 +133,10 @@ Shows the commit logs.
 - git log --pretty=format:"%h - %an, %ar : %s"
 -     
 https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History
+
+# Git Commit
+
+# What is remote name?
+
+# What is origion?
+
