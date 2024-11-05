@@ -9,7 +9,7 @@ Table of content:
 - 2.6 Tagging
 - 2.7 Git Aliases
 - 2.8 Summary
-- Git Branch Vs Tag
+- [Git Branch Vs Tag](https://github.com/shyam2k23/repo2024/blob/main/Git.md#git-branch-vs-tag)
 - Git Tag
 - Git Branch
 - Git Log
