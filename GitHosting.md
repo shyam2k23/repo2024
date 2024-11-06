@@ -13,3 +13,8 @@ A fork is a new repository that shares code and visibility settings with the ori
 
 https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo
 https://support.atlassian.com/bitbucket-cloud/docs/fork-a-repository/
+
+## Syncing a fork
+https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork
+
+https://confluence.atlassian.com/bitbucketserver/keeping-forks-synchronized-776639961.html
