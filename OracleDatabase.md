@@ -32,9 +32,36 @@ An Oracle Instance consists of two different sets of components:
 >> These processes perform input/output and monitor other Oracle processes to provide good performance and database reliability.
 * The second component set includes **the memory structures** that comprise the Oracle instance.
 >>  When an instance starts up, a memory structure called the System Global Area (SGA) is allocated. 
->>  At this point the background processes also start. 
+>>  At this point the background processes also start.
+
+The SGA is a shared memory structure allocated when the instance started up and is released when it is shut down. The SGA is a group of shared memory structures that contain data and control information for one database instance.
+
+Different from the SGA, which is available to all processes, PGA is a private memory area allocated to each session when the session starts and released when the session ends.
+
+
+![image](https://github.com/user-attachments/assets/d983cbfd-3798-438e-beb4-363cbe3e33c8)
+
+
+---------- 
 
 ![image](https://github.com/user-attachments/assets/77ed6364-6ca0-4734-8fca-9f6f47f831cd)
+----------
+
+#### Major Oracle Database’s background processes:
+* PMON is the process monitor that regulates all other processes. PMON cleans up abnormally connected database connections and automatically registers a database instance with the listener process. PMON is a process that must be alive in an Oracle database.
+* SMON is the system monitor process that performs system-level clean-up operations. It has two primary responsibilities including automatic instance recovery in the event of a failed instance, e.g., power failure and cleaning up of temporary files.
+* DBWn is the database writer. Oracle performs every operation in memory instead of the disk because processing in memory is faster and more efficient than on disk. The DBWn process reads data from the disk and writes it back to the disk. An Oracle instance has many database writers DBW0, DBW1, DBW2, and so on.
+* CKPT is the checkpoint process. In Oracle, data that is on disk is called a block and the data in memory is called buffer. When a block is written to the buffer and changed, the buffer becomes dirty, and it needs to be written down on the disk. The CKPT process updates the control and data file headers with checkpoint information and signals writing of dirty buffers to disk. Note that Oracle 12c allows both full and incremental checkpoints.
+
+![image](https://github.com/user-attachments/assets/bcd094fe-1970-4af2-9fee-88ad7efc13db)
+
+
+* LGWR is the log writer process which is the key to the recoverability architecture. Every change that occurs in the database is written out to a file called redo log for recovery purposes. These changes are written and logged by the LGWR process. The LGWR process first writes the changes to memory and then disk as redo logs which then can be used for recovery.
+* ARCn is the archiver process that copies the content of redo logs to archive redo log files. The archiver process can have multiple processes such as ARC0, ARC1, and ARC3, which allow the archiver to write to various destinations such as D: drive, E drive, or other storage.
+* MMON is the manageability monitoring process that gathers performance metrics.
+* MMAN is the memory manager that automatically manages memory in an Oracle database.
+* LREG is the listener registration process that registers information on the database instance and dispatcher processes with the Oracle Net Listener.
+
 
 ### Memory Architecture
 https://docs.oracle.com/en/database/oracle/oracle-database/23/cncpt/memory-architecture.html
@@ -69,6 +96,8 @@ Logical storage helps users find data and improves retrieval efficiency. The Dat
 https://docs.oracle.com/cd/E11882_01/server.112/e40540/logical.htm
 
 https://www.geeksforgeeks.org/working-on-oracle-tablespaces-for-developers/  
+
+https://docs.oracle.com/en/database/oracle/oracle-database/23/cncpt/logical-storage-structures.html#GUID-2785BB10-1628-4645-AEE9-27EC18E8BB21
 
 
 ### II) Physical storage structures
