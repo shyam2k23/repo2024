@@ -9,6 +9,11 @@ https://www.oracletutorial.com/plsql-tutorial/
 
 # Oracle Exception handling
 
+# 3. Oracle Query Optimization
+
+Developer - Understand query parsing and execution process +  Execution Plan
+DBA - Oracle meta data to get tow know + oracle memory mapping - Db Block
+
 # 2. Oracle Architecture
 
 An Oracle Database **Server** consists of two things, **An Instance(Database Instance)** and **A Database**.
@@ -174,3 +179,6 @@ https://docs.oracle.com/cd/E11882_01/server.112/e40540/logical.htm#CNCPT301
 https://www.geeksforgeeks.org/oracle-architecture/
 https://www.oracletutorial.com/oracle-administration/oracle-database-architecture/
 https://blog.unisoftindia.org/2014/12/oracle-architecture-explained-in.html
+https://argano.com/insights/articles/an-overview-of-oracle-database-architecture.html#:~:text=A%20breakdown%20of%20Oracle%20Database%20architecture&text=The%20database%20has%20logical%20structures,tasks%20is%20to%20store%20data.
+https://docs.oracle.com/en/database/oracle/oracle-database/23/dbiad/db_dbserver.html
+https://www.oracle.com/webfolder/technetwork/tutorials/architecture-diagrams/19/pdf/db-19c-architecture.pdf
