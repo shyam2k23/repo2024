@@ -11,10 +11,10 @@ https://www.oracletutorial.com/plsql-tutorial/
 
 # 2. Oracle Architecture
 
-An Oracle Database **Server** consists of two things, **A Database** and **An Instance(Database Instance)**.
+An Oracle Database **Server** consists of two things, **An Instance(Database Instance)** and **A Database**.
 
-* **A Database**: It is a set of files that store data.
 * **An Instance** (at least one): A database instance, is the combination of memory and processes that are a part of a running installation.
+* **A Database**: It is a set of files that store data.
 
 ![image](https://github.com/user-attachments/assets/3eb7cd54-66c4-473f-9c49-411b5aeb4c77)
 
@@ -25,7 +25,31 @@ An Oracle Database **Server** consists of two things, **A Database** and **An In
 ![image](https://github.com/user-attachments/assets/74219c60-bd9b-4167-b613-b35dc5d0473f)
 
 
-## 2. (a) Oracle Database
+## 2. (A) Oracle Instance(Database Instance)
+
+An Oracle Instance consists of two different sets of components:
+* The first component set is **the set of background processes** (PMON, SMON, RECO, DBW0, LGWR, CKPT, D000 and others). 
+>> These processes perform input/output and monitor other Oracle processes to provide good performance and database reliability.
+* The second component set includes **the memory structures** that comprise the Oracle instance.
+>>  When an instance starts up, a memory structure called the System Global Area (SGA) is allocated. 
+>>  At this point the background processes also start. 
+
+![image](https://github.com/user-attachments/assets/77ed6364-6ca0-4734-8fca-9f6f47f831cd)
+
+### Memory Architecture
+https://docs.oracle.com/en/database/oracle/oracle-database/23/cncpt/memory-architecture.html
+#### SGA
+https://docs.oracle.com/en/database/oracle/oracle-database/23/cncpt/memory-architecture.html#GUID-24EDB8CD-8279-4CED-82AF-642FC01A4A73
+
+### Process Architecture
+https://docs.oracle.com/en/database/oracle/oracle-database/23/cncpt/process-architecture.html
+
+#### Background Process
+https://docs.oracle.com/en/database/oracle/oracle-database/23/cncpt/process-architecture.html#GUID-D8AE1B78-69D5-4F0F-8BE3-C91AA2514F2D
+
+https://docs.oracle.com/en/database/oracle/oracle-database/23/cncpt/oracle-database-instance.html#GUID-824DB02D-D382-4B23-9A94-85A3E816B75E
+
+## 2. (B) Oracle Database
 
 One of the essential tasks of the Oracle Database is **to store data**. 
 Oracle stores data logically in **tablespaces** and physically in **datafiles** associated with the corresponding tablespace.
@@ -103,29 +127,6 @@ https://docs.oracle.com/cd/E11882_01/server.112/e40540/logical.htm#CNCPT402
 https://docs.oracle.com/cd/E11882_01/server.112/e40540/logical.htm#CNCPT301  
 
 
-## 2. b) Oracle Instance(Database Instance)
-
-An Oracle Instance consists of two different sets of components:
-* The first component set is **the set of background processes** (PMON, SMON, RECO, DBW0, LGWR, CKPT, D000 and others). 
->> These processes perform input/output and monitor other Oracle processes to provide good performance and database reliability.
-* The second component set includes **the memory structures** that comprise the Oracle instance.
->>  When an instance starts up, a memory structure called the System Global Area (SGA) is allocated. 
->>  At this point the background processes also start. 
-
-![image](https://github.com/user-attachments/assets/77ed6364-6ca0-4734-8fca-9f6f47f831cd)
-
-### Memory Architecture
-https://docs.oracle.com/en/database/oracle/oracle-database/23/cncpt/memory-architecture.html
-#### SGA
-https://docs.oracle.com/en/database/oracle/oracle-database/23/cncpt/memory-architecture.html#GUID-24EDB8CD-8279-4CED-82AF-642FC01A4A73
-
-### Process Architecture
-https://docs.oracle.com/en/database/oracle/oracle-database/23/cncpt/process-architecture.html
-
-#### Background Process
-https://docs.oracle.com/en/database/oracle/oracle-database/23/cncpt/process-architecture.html#GUID-D8AE1B78-69D5-4F0F-8BE3-C91AA2514F2D
-
-https://docs.oracle.com/en/database/oracle/oracle-database/23/cncpt/oracle-database-instance.html#GUID-824DB02D-D382-4B23-9A94-85A3E816B75E
 
 #### References
 https://www.geeksforgeeks.org/oracle-architecture/
