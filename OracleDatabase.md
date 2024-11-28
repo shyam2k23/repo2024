@@ -11,10 +11,10 @@ https://www.oracletutorial.com/plsql-tutorial/
 
 # 2. Oracle Architecture
 
-An Oracle Database consists of two things technically, A Database and An Instance(Database instance).
+An Oracle Database **Server** consists of two things, **A Database** and **An Instance(Database Instance)**.
 
-* A Database: It is a set of files that store data.
-* An Instance (at least one): A database instance, is the combination of memory and processes that are a part of a running installation.
+* **A Database**: It is a set of files that store data.
+* **An Instance** (at least one): A database instance, is the combination of memory and processes that are a part of a running installation.
 
 ![image](https://github.com/user-attachments/assets/3eb7cd54-66c4-473f-9c49-411b5aeb4c77)
 
@@ -27,8 +27,8 @@ An Oracle Database consists of two things technically, A Database and An Instanc
 
 ## 2. (a) Oracle Database
 
-One of the essential tasks of the Oracle Database is to store data. 
-Oracle stores data logically in tablespaces and physically in datafiles associated with the corresponding tablespace.
+One of the essential tasks of the Oracle Database is **to store data**. 
+Oracle stores data logically in **tablespaces** and physically in **datafiles** associated with the corresponding tablespace.
 
 ### I) Physical storage structures
 
@@ -42,8 +42,19 @@ The physical files that store data on disk. The operating system can see and ope
 
 ### II) Logical storage structures
 
-The structures that the Oracle database server creates and recognizes, but the operating system doesn't.
+Oracle database server creates and recognizes logical structures, but the operating system doesn't.
 Logical storage helps users find data and improves retrieval efficiency. The Database has a tablespace that stores all the data. Everything inside a database is stored in tablespace.
+
+* **Tablespaces**: A database is divided into logical storage units called tablespaces. A tablespace is a logical container for a segment. Each tablespace consists of at least one data file. This is primary logical structure in a database that contains physical files. 
+* **Segments**: A segment is a set of extents allocated for storing database objects, e.g., a table or an index. Contain one or more extents 
+* **Extents**: An extent is a specific number of logically contiguous data blocks used to store a particular type of information. Contain multiple data blocks 
+* **Blocks**: a data block corresponds to a number of bytes on the disk. Oracle stores data in data blocks. Data blocks are also referred to as logical blocks, Oracle blocks, or pages. Contains general information, such as the disk address and segment type
+
+![image](https://github.com/user-attachments/assets/be821ea9-24fc-4c87-980e-c9c1c97cb716)
+
+https://docs.oracle.com/cd/E11882_01/server.112/e40540/logical.htm
+
+https://www.geeksforgeeks.org/working-on-oracle-tablespaces-for-developers/  
 
 In databases, "table" and "tablespace" refer to two distinct concepts:
 
@@ -66,12 +77,7 @@ An tablespace is linked to a DATAFILE (physical file).
 
 Table (logical) > Tablespace (logical) > Datafile (physical)
 
-* **Tablespaces**: The primary logical structure in a database that contains physical files 
-* **Segments**: Contain one or more extents 
-* **Extents**: Contain multiple data blocks 
-* **Blocks**: Contain general information, such as the disk address and segment type
 
-https://www.geeksforgeeks.org/working-on-oracle-tablespaces-for-developers/  
 
 A little terminology:
 
@@ -90,6 +96,27 @@ https://docs.oracle.com/cd/E11882_01/server.112/e40540/logical.htm#CNCPT301
 
 ## 2. b) Oracle Instance(Database Instance)
 
+An Oracle Instance consists of two different sets of components:
+* The first component set is **the set of background processes** (PMON, SMON, RECO, DBW0, LGWR, CKPT, D000 and others). 
+>> These processes perform input/output and monitor other Oracle processes to provide good performance and database reliability.
+* The second component set includes **the memory structures** that comprise the Oracle instance.
+>>  When an instance starts up, a memory structure called the System Global Area (SGA) is allocated. 
+>>  At this point the background processes also start. 
+
+![image](https://github.com/user-attachments/assets/77ed6364-6ca0-4734-8fca-9f6f47f831cd)
+
+### Memory Architecture
+https://docs.oracle.com/en/database/oracle/oracle-database/23/cncpt/memory-architecture.html
+#### SGA
+https://docs.oracle.com/en/database/oracle/oracle-database/23/cncpt/memory-architecture.html#GUID-24EDB8CD-8279-4CED-82AF-642FC01A4A73
+
+### Process Architecture
+https://docs.oracle.com/en/database/oracle/oracle-database/23/cncpt/process-architecture.html
+
+#### Background Process
+https://docs.oracle.com/en/database/oracle/oracle-database/23/cncpt/process-architecture.html#GUID-D8AE1B78-69D5-4F0F-8BE3-C91AA2514F2D
+
+https://docs.oracle.com/en/database/oracle/oracle-database/23/cncpt/oracle-database-instance.html#GUID-824DB02D-D382-4B23-9A94-85A3E816B75E
 
 #### References
 https://www.geeksforgeeks.org/oracle-architecture/
