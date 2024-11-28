@@ -1,19 +1,3 @@
-# Oracle Basics
-
-https://www.tutorialspoint.com/plsql/index.htm  
-https://www.geeksforgeeks.org/pl-sql-tutorial/  
-https://www.javatpoint.com/pl-sql-tutorial  
-https://www.oracletutorial.com/plsql-tutorial/  
-
-## Oracle Exception
-
-# Oracle Exception handling
-
-# 3. Oracle Query Optimization
-
-Developer - Understand query parsing and execution process +  Execution Plan
-DBA - Oracle meta data to get tow know + oracle memory mapping - Db Block
-
 # 2. Oracle Architecture
 
 An Oracle Database **Server** consists of two things, **An Instance(Database Instance)** and **A Database**.
