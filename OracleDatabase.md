@@ -46,21 +46,32 @@ Different from the SGA, which is available to all processes, PGA is a private me
 
 ![image](https://github.com/user-attachments/assets/77ed6364-6ca0-4734-8fca-9f6f47f831cd)
 ----------
+#### SGA Components:
+
+* **Database buffer cache**: The Buffer Cache is a portion of the SGA that stores copies of data blocks read from datafiles. It is used to cache frequently accessed data blocks, reducing the number of disks I/Os required to access the data. This can improve performance by reducing disk I/O time and increasing the speed of data retrieval.
+* **Redo log Buffer**: The most crucial structure for recovery operations is the redo log, which consists of two or more preallocated files that store all changes made to the database as they occur. Every instance of an Oracle Database has an associated redo log to protect the database in case of an instance failure.
+* **Java pool**: The Java Pool is an optional portion of the SGA that is used by Java Virtual Machine (JVM) and related components. It is used to store Java-related data structures, such as Java classes and objects. This pool is used when the Oracle Database is configured to run Java applications or when using Oracle JVM.
+* **Large Pool**: The Large Pool is an optional portion of the SGA that can be used for large memory allocation, such as backup and restore operations and I/O server processes. It is typically used to improve the performance of these operations by reducing the amount of disk I/O required.
+* **Shared pool**: The Shared Pool is a portion of the SGA that contains shared memory structures, such as shared SQL and PL/SQL areas. It is used to store the parsed representation of SQL statements, execution plans, and PL/SQL program units. This allows for the efficient reuse of frequently executed statements, reducing the need for reparsing and improving performance.
+
+https://www.geeksforgeeks.org/oracle-architecture/
 
 #### Major Oracle Database’s background processes:
-* PMON is the process monitor that regulates all other processes. PMON cleans up abnormally connected database connections and automatically registers a database instance with the listener process. PMON is a process that must be alive in an Oracle database.
-* SMON is the system monitor process that performs system-level clean-up operations. It has two primary responsibilities including automatic instance recovery in the event of a failed instance, e.g., power failure and cleaning up of temporary files.
-* DBWn is the database writer. Oracle performs every operation in memory instead of the disk because processing in memory is faster and more efficient than on disk. The DBWn process reads data from the disk and writes it back to the disk. An Oracle instance has many database writers DBW0, DBW1, DBW2, and so on.
-* CKPT is the checkpoint process. In Oracle, data that is on disk is called a block and the data in memory is called buffer. When a block is written to the buffer and changed, the buffer becomes dirty, and it needs to be written down on the disk. The CKPT process updates the control and data file headers with checkpoint information and signals writing of dirty buffers to disk. Note that Oracle 12c allows both full and incremental checkpoints.
+* **PMON** is the process monitor that regulates all other processes. PMON cleans up abnormally connected database connections and automatically registers a database instance with the listener process. PMON is a process that must be alive in an Oracle database.
+* **SMON** is the system monitor process that performs system-level clean-up operations. It has two primary responsibilities including automatic instance recovery in the event of a failed instance, e.g., power failure and cleaning up of temporary files.
+* **DBWn** is the database writer. Oracle performs every operation in memory instead of the disk because processing in memory is faster and more efficient than on disk. The DBWn process reads data from the disk and writes it back to the disk. An Oracle instance has many database writers DBW0, DBW1, DBW2, and so on.
+* **CKPT** is the checkpoint process. In Oracle, data that is on disk is called a block and the data in memory is called buffer. When a block is written to the buffer and changed, the buffer becomes dirty, and it needs to be written down on the disk. The CKPT process updates the control and data file headers with checkpoint information and signals writing of dirty buffers to disk. Note that Oracle 12c allows both full and incremental checkpoints.
 
 ![image](https://github.com/user-attachments/assets/bcd094fe-1970-4af2-9fee-88ad7efc13db)
 
 
-* LGWR is the log writer process which is the key to the recoverability architecture. Every change that occurs in the database is written out to a file called redo log for recovery purposes. These changes are written and logged by the LGWR process. The LGWR process first writes the changes to memory and then disk as redo logs which then can be used for recovery.
-* ARCn is the archiver process that copies the content of redo logs to archive redo log files. The archiver process can have multiple processes such as ARC0, ARC1, and ARC3, which allow the archiver to write to various destinations such as D: drive, E drive, or other storage.
-* MMON is the manageability monitoring process that gathers performance metrics.
-* MMAN is the memory manager that automatically manages memory in an Oracle database.
-* LREG is the listener registration process that registers information on the database instance and dispatcher processes with the Oracle Net Listener.
+* **LGWR** is the log writer process which is the key to the recoverability architecture. Every change that occurs in the database is written out to a file called redo log for recovery purposes. These changes are written and logged by the LGWR process. The LGWR process first writes the changes to memory and then disk as redo logs which then can be used for recovery.
+* **ARCn** is the archiver process that copies the content of redo logs to archive redo log files. The archiver process can have multiple processes such as ARC0, ARC1, and ARC3, which allow the archiver to write to various destinations such as D: drive, E drive, or other storage.
+* **MMON** is the manageability monitoring process that gathers performance metrics.
+* **MMAN** is the memory manager that automatically manages memory in an Oracle database.
+* **LREG** is the listener registration process that registers information on the database instance and dispatcher processes with the Oracle Net Listener.
+
+https://www.oracletutorial.com/oracle-administration/oracle-database-architecture/
 
 
 ### Memory Architecture
@@ -81,7 +92,7 @@ https://docs.oracle.com/en/database/oracle/oracle-database/23/cncpt/oracle-datab
 One of the essential tasks of the Oracle Database is **to store data**. 
 Oracle stores data logically in **tablespaces** and physically in **datafiles** associated with the corresponding tablespace.
 
-### II) Logical storage structures
+### I) Logical storage structures
 
 Oracle database server creates and recognizes logical structures, but the operating system doesn't.
 Logical storage helps users find data and improves retrieval efficiency. The Database has a tablespace that stores all the data. Everything inside a database is stored in tablespace.
@@ -117,7 +128,9 @@ https://docs.oracle.com/en/database/oracle/oracle-database/23/cncpt/physical-sto
 
 https://docs.oracle.com/cd/E11882_01/server.112/e40540/physical.htm
 
-
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
 In databases, "table" and "tablespace" refer to two distinct concepts:
 
 Table
@@ -160,4 +173,4 @@ https://docs.oracle.com/cd/E11882_01/server.112/e40540/logical.htm#CNCPT301
 #### References
 https://www.geeksforgeeks.org/oracle-architecture/
 https://www.oracletutorial.com/oracle-administration/oracle-database-architecture/
-
+https://blog.unisoftindia.org/2014/12/oracle-architecture-explained-in.html
