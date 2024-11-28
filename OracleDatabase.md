@@ -30,16 +30,6 @@ An Oracle Database **Server** consists of two things, **A Database** and **An In
 One of the essential tasks of the Oracle Database is **to store data**. 
 Oracle stores data logically in **tablespaces** and physically in **datafiles** associated with the corresponding tablespace.
 
-### I) Physical storage structures
-
-The physical files that store data on disk. The operating system can see and operate on these files.
-
-* **Data files**: These files hold the actual data in the database.
-* **Redo log files**: These files are used to hold the changes made in the database. Redo log files can be utilized during the database recovery process to retrieve the original information.
-* **Control files**: It is a binary file that holds database status-related information like Database Name, Data File, and Redo Log file Names, File Locations, and Log Sequence Number. 
-* **Parameter file**: This file contains the parameters which define the way the database is expected to start up.
-* **Password file**: This file holds the user passwords and thus maintains the security of databases.
-
 ### II) Logical storage structures
 
 Oracle database server creates and recognizes logical structures, but the operating system doesn't.
@@ -55,6 +45,25 @@ Logical storage helps users find data and improves retrieval efficiency. The Dat
 https://docs.oracle.com/cd/E11882_01/server.112/e40540/logical.htm
 
 https://www.geeksforgeeks.org/working-on-oracle-tablespaces-for-developers/  
+
+
+### II) Physical storage structures
+
+The physical files that store data on disk. The operating system can see and operate on these files.
+
+* **Data files**: These files hold the actual data in the database.
+* **Redo log files**: These files are used to hold the changes made in the database. Redo log files can be utilized during the database recovery process to retrieve the original information.
+* **Control files**: It is a binary file that holds database status-related information like Database Name, Data File, and Redo Log file Names, File Locations, and Log Sequence Number. 
+* **Parameter file**: This file contains the parameters which define the way the database is expected to start up.
+* **Password file**: This file holds the user passwords and thus maintains the security of databases.
+
+
+![image](https://github.com/user-attachments/assets/a16971a3-0a16-4314-870d-87d267c07da7)
+
+https://docs.oracle.com/en/database/oracle/oracle-database/23/cncpt/physical-storage-structures.html#GUID-56DFECE5-FB81-494F-9AB8-25F120A1BDDC
+
+https://docs.oracle.com/cd/E11882_01/server.112/e40540/physical.htm
+
 
 In databases, "table" and "tablespace" refer to two distinct concepts:
 
