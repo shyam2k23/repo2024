@@ -1,0 +1,55 @@
+What is container?
+
+It is a technology which improve deployment of an application.
+
+To understand it better first have to understand how application deploy on server
+1) Before 2002
+Bare Matel machine, 
+we deploy application manually
+
+Container is way to create isolated environment on top of existing Physical Server and Virtual Server(VM).
+Container provide alt
+
+
+VM - Virtual Machine
+
+Hypervisor
+
+VM Ware
+
+Container
+
+runtime
+
+Docker, Podman
+
+
+What is Docker?
+Docker is an implementation of container technology.
+
+What are basics of Docker?
+1. Dockerfile
+2. Docker image
+3. Docker container
+4. Docker hub
+
+Dockerfile
+
+FROM <Container_image_name_from_Docker_Registery>
+COPY sourcefieldesination[/tmp /opt]
+EXPOSE 9090
+CMD [java -jar application.jar]
+
+docker pull nginx
+
+docker images
+
+Detach mode
+docker run -dit 9766 /bin/bash
+
+Interactive more
+docker run -dit 9766 /bin/bash
+
+docker ps
+
+
